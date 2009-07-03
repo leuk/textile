@@ -1,6 +1,6 @@
 class SectionsController < ApplicationController
   
- # uses_yui_editor
+
 
   def index
     @sections = Section.all
@@ -11,8 +11,7 @@ class SectionsController < ApplicationController
     end
   end
 
-  # GET /sections/1
-  # GET /sections/1.xml
+
   def show
     @section = Section.find(params[:id])
 
@@ -22,8 +21,7 @@ class SectionsController < ApplicationController
     end
   end
 
-  # GET /sections/new
-  # GET /sections/new.xml
+
   def new
     @section = Section.new
      @yes = [1=>'oui' , 2=>'non']
@@ -33,13 +31,11 @@ class SectionsController < ApplicationController
     end
   end
 
-  # GET /sections/1/edit
   def edit
     @section = Section.find(params[:id])
   end
 
-  # POST /sections
-  # POST /sections.xml
+
   def create
     @section = Section.new(params[:section])
 
@@ -55,8 +51,6 @@ class SectionsController < ApplicationController
     end
   end
 
-  # PUT /sections/1
-  # PUT /sections/1.xml
   def update
     @section = Section.find(params[:id])
 
@@ -72,8 +66,6 @@ class SectionsController < ApplicationController
     end
   end
 
-  # DELETE /sections/1
-  # DELETE /sections/1.xml
   def destroy
     @section = Section.find(params[:id])
     @section.destroy

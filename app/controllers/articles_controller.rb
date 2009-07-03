@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+	
+  uses_yui_editor	
+	
   def index
     @articles = Article.all
   end
