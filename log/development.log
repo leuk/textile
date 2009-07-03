@@ -1459,3 +1459,248 @@ Rendering template within layouts/application
 Rendering articles/new
 Rendered articles/_form (2468.0ms)
 Completed in 2901ms (View: 2617, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-07-03 19:44:09) [GET]
+
+NameError (undefined local variable or method `uses_tinymce' for ArticlesController:Class):
+  app/controllers/articles_controller.rb:3
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (1302.0ms)
+Rendered rescues/_request_and_response (54.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 19:44:37) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (1820.0ms)
+Completed in 2988ms (View: 1990, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-03 19:44:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/tiny_mce_src.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 19:45:35) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (140.0ms)
+Completed in 325ms (View: 198, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-03 19:45:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/tiny_mce_src.js" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 19:48:39) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (3136.0ms)
+Completed in 3804ms (View: 3312, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-07-03 19:49:48) [GET]
+
+SyntaxError (/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:4: syntax error, unexpected tASSOC, expecting kEND
+   :options => {
+              ^):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (335.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 19:50:15) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (138.0ms)
+Completed in 360ms (View: 172, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 19:55:30) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (109.0ms)
+Completed in 274ms (View: 127, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 19:57:06) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (406.0ms)
+Completed in 583ms (View: 440, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-07-03 19:58:10) [GET]
+
+SyntaxError (/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:6: syntax error, unexpected tSYMBEG, expecting '}'
+		                  :theme => 'advanced',
+		                   ^
+/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:6: syntax error, unexpected ',', expecting kEND
+/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:7: Can't assign to true
+/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:8: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+		                  :theme_advanced_resize_horizontal => true,
+		                                                      ^
+/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:8: Can't assign to true
+/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:9: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+		                  :plugins => %w{ table fullscreen , pagebreak}
+		                             ^
+/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:10: syntax error, unexpected '}', expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (314.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 19:58:25) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (181.0ms)
+Completed in 368ms (View: 225, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 20:00:03) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (139.0ms)
+Completed in 1372ms (View: 173, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 20:01:37) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (111.0ms)
+Completed in 289ms (View: 144, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 20:02:20) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (121.0ms)
+Completed in 964ms (View: 829, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-07-03 20:05:35) [GET]
+
+SyntaxError (/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:10: syntax error, unexpected tSYMBEG, expecting '}'
+		                  :theme_advanced_resize_horizontal => true,
+		                   ^
+/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:10: Can't assign to true
+/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:11: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+		                  :theme_advanced_toolbar_location => "top",
+		                                                     ^
+/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:11: syntax error, unexpected ',', expecting kEND
+/home/Administrateur/projects/text-project/blog/textile/app/controllers/articles_controller.rb:13: syntax error, unexpected '}', expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (245.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 20:05:48) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (120.0ms)
+Completed in 439ms (View: 169, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 20:07:12) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (49.0ms)
+Completed in 553ms (View: 203, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 20:12:35) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (450.0ms)
+Completed in 610ms (View: 467, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 20:16:52) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (251.0ms)
+Completed in 473ms (View: 311, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 20:18:08) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (128.0ms)
+Completed in 370ms (View: 183, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 20:19:08) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (120.0ms)
+Completed in 300ms (View: 171, DB: 0) | 200 OK [http://localhost/articles/new]

@@ -1,6 +1,19 @@
 class ArticlesController < ApplicationController
 	
-  uses_yui_editor	
+   uses_tiny_mce  :options => 
+		   				{
+		   				  :mode => 'textareas',
+		                  :theme => 'advanced',		                  
+		                  :plugins => %w{ table fullscreen pagebreak style layer},
+		                  :theme_advanced_resizing => true,
+		                  :theme_advanced_buttons1 => %w{save newdocument   bold italic underline strikethrough   justifyleft justifycenter justifyright justifyfull   styleselect formatselect fontselect,fontsizeselect},
+:theme_advanced_buttons2 => %w{cut copy paste pastetext pasteword search replace bullist numlist  outdent indent blockquote undo redo link unlink anchor image cleanup help code insertdate inserttime preview forecolor backcolor insertlayer moveforward movebackward absolute styleprops},
+:theme_advanced_buttons3 => %w{tablecontrols hr removeformat visualaid sub sup  charmap emotions iespell media advhr print ltr rtl fullscreen pagebreak  insertimage spellchecker cite abbr acronym del ins attribs visualchars nonbreaking template blockquote},
+		                  :theme_advanced_resize_horizontal => true,
+		                  :theme_advanced_toolbar_location => "top",
+		                  :theme_advanced_toolbar_align => "left"
+		                }
+
 	
   def index
     @articles = Article.all
