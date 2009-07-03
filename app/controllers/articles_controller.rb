@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 	
-   uses_tiny_mce  :options => 
+   uses_tiny_mce :only => ['new' , 'new'] , :options => 
 		   				{
 		   				  :mode => 'textareas',
 		                  :theme => 'advanced',		                  
