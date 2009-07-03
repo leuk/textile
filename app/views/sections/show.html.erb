@@ -1,0 +1,28 @@
+<p>
+  <b>Title:</b>
+  <%=h @section.title %>
+</p>
+
+<p>
+  <b>Keywords:</b>
+  <%=h @section.keywords %>
+</p>
+
+<p>
+  <b>Meta:</b>
+  <%=h @section.meta %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @section.content %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @section.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>
