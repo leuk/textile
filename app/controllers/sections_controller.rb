@@ -1,6 +1,7 @@
 class SectionsController < ApplicationController
-  # GET /sections
-  # GET /sections.xml
+  
+  uses_yui_editor
+
   def index
     @sections = Section.all
 

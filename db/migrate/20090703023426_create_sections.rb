@@ -5,7 +5,7 @@ class CreateSections < ActiveRecord::Migration
       t.string :keywords
       t.string :meta
       t.text :content
-      t.boolean :status
+      t.boolean :status , :default => false
 
       t.timestamps
     end

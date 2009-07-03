@@ -1,0 +1,32 @@
+<% form_for @article do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :s_publish %><br />
+    <%= f.date_select :s_publish %>
+  </p>
+  <p>
+    <%= f.label :e_publish %><br />
+    <%= f.date_select :e_publish %>
+  </p>
+  <p>
+    <%= f.label :page_title %><br />
+    <%= f.text_field :page_title %>
+  </p>
+  <p>
+    <%= f.label :keywords %><br />
+    <%= f.text_field :keywords %>
+  </p>
+  <p>
+    <%= f.label :meta %><br />
+    <%= f.text_field :meta %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

@@ -1,28 +1,8 @@
-<h1>Listing sections</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Keywords</th>
-    <th>Meta</th>
-    <th>Content</th>
-    <th>Status</th>
-  </tr>
-
-<% @sections.each do |section| %>
-  <tr>
-    <td><%=h section.title %></td>
-    <td><%=h section.keywords %></td>
-    <td><%=h section.meta %></td>
-    <td><%=h section.content %></td>
-    <td><%=h section.status %></td>
-    <td><%= link_to 'Show', section %></td>
-    <td><%= link_to 'Edit', edit_section_path(section) %></td>
-    <td><%= link_to 'Destroy', section, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New section', new_section_path %>
+<ul>
+	<% @sections.each do |section| %>
+		<li>
+			<%= link_to section.title, section %>
+		</li>
+	<% end %>
+</ul>
