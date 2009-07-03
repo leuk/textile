@@ -9,12 +9,13 @@
     <%= f.text_area :content , :class => 'mceEditor' %>
   </p>
   <p>
-    <%= f.label :s_publish %><br />
-    <%= f.date_select :s_publish %>
+    <%= f.label :start_publish %><br />
+	<%= calendar_date_select_tag :s_publish %>
   </p>
   <p>
-    <%= f.label :e_publish %><br />
-    <%= f.date_select :e_publish %>
+    <%= f.label :end_publish %><br />
+    <%= calendar_date_select_tag :e_publish %>
+
   </p>
   <p>
     <%= f.label :page_title %><br />

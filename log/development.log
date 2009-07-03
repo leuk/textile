@@ -1732,3 +1732,90 @@ Rendering template within layouts/application
 Rendering articles/new
 Rendered articles/_form (2618.0ms)
 Completed in 3334ms (View: 2912, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 22:05:23) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (1687.0ms)
+Completed in 1989ms (View: 1773, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 22:06:14) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (72.0ms)
+
+ActionView::TemplateError (undefined method `javascript_include_tags' for #<ActionView::Base:0x7f179bdc>) on line #13 of app/views/layouts/application.html.erb:
+10:   </title>
+11:   <%= stylesheet_link_tag 'scaffold' %>
+12:   <%= include_tiny_mce_if_needed %>
+13:   <% javascript_include_tags :defaults %>
+14:   <%= calendar_date_select_includes "red"  %>
+15: </head>
+16: 
+
+    app/views/layouts/application.html.erb:13
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (289.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 22:08:43) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (69.0ms)
+Completed in 216ms (View: 133, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 22:09:42) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (85.0ms)
+Completed in 274ms (View: 151, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 22:14:55) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (110.0ms)
+Completed in 588ms (View: 379, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 22:15:21) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (85.0ms)
+Completed in 234ms (View: 151, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 22:16:14) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (62.0ms)
+Completed in 202ms (View: 123, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 22:17:03) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (60.0ms)
+Completed in 218ms (View: 122, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-03 22:17:36) [GET]
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (59.0ms)
+Completed in 245ms (View: 120, DB: 0) | 200 OK [http://localhost/articles/new]
