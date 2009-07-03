@@ -466,3 +466,692 @@ Processing SectionsController#show (for 127.0.0.1 at 2009-07-03 08:22:45) [GET]
 Rendering template within layouts/application
 Rendering sections/show
 Completed in 344ms (View: 111, DB: 3) | 200 OK [http://localhost/sections/1]
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-07-03 08:28:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSection Load (3.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering sections/show
+Completed in 387ms (View: 212, DB: 3) | 200 OK [http://localhost/sections/2]
+
+
+Processing SectionsController#edit (for 127.0.0.1 at 2009-07-03 08:28:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSection Load (5.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering sections/edit
+Completed in 420ms (View: 195, DB: 5) | 200 OK [http://localhost/sections/2/edit]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-07-03 08:28:51) [GET]
+  [4;36;1mSection Load (5.0ms)[0m   [0;1mSELECT * FROM "sections" [0m
+Rendering template within layouts/application
+Rendering sections/index
+Completed in 289ms (View: 138, DB: 5) | 200 OK [http://localhost/sections]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 08:29:00) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 287ms (View: 121, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#create (for 127.0.0.1 at 2009-07-03 08:29:28) [POST]
+  Parameters: {"section"=>{"title"=>"Section3", "meta"=>"", "content"=>"", "image"=>#<File:/cygdrive/c/DOCUME~1/ADMINI~1/LOCALS~1/Temp/RackMultipart20090703-3608-10ecspi-0>, "status"=>"0", "keywords"=>""}, "commit"=>"Create", "authenticity_token"=>"CwKI5hUXMip1jJjIkKwSclIaF0xcumMGZ5ymXCfDSM4="}
+  [4;35;1mSection Create (4.0ms)[0m   [0mINSERT INTO "sections" ("created_at", "image_file_name", "title", "image_file_size", "updated_at", "image_content_type", "meta", "content", "status", "image_updated_at", "keywords") VALUES('2009-07-03 06:29:38', 'hacker.jpg', 'Section3', 25997, '2009-07-03 06:29:38', 'image/jpeg', '', '', 'f', '2009-07-03 06:29:29', '')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/sections/3/thumb/hacker.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/sections/3/original/hacker.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/sections/3/small/hacker.jpg
+Redirected to http://localhost:3000/sections/3
+Completed in 10734ms (DB: 4) | 302 Found [http://localhost/sections]
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-07-03 08:29:40) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSection Load (19.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering sections/show
+Completed in 343ms (View: 169, DB: 19) | 200 OK [http://localhost/sections/3]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-07-03 08:29:47) [GET]
+  [4;35;1mSection Load (21.0ms)[0m   [0mSELECT * FROM "sections" [0m
+Rendering template within layouts/application
+Rendering sections/index
+Completed in 296ms (View: 124, DB: 21) | 200 OK [http://localhost/sections]
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-07-03 08:29:55) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSection Load (2.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering sections/show
+Completed in 397ms (View: 32, DB: 2) | 200 OK [http://localhost/sections/3]
+
+
+Processing SectionsController#edit (for 127.0.0.1 at 2009-07-03 08:29:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mSection Load (4.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering sections/edit
+Completed in 306ms (View: 145, DB: 4) | 200 OK [http://localhost/sections/3/edit]
+
+
+Processing SectionsController#update (for 127.0.0.1 at 2009-07-03 08:30:06) [PUT]
+  Parameters: {"section"=>{"title"=>"Section 3", "meta"=>"", "content"=>"", "status"=>"0", "keywords"=>""}, "commit"=>"Update", "authenticity_token"=>"CwKI5hUXMip1jJjIkKwSclIaF0xcumMGZ5ymXCfDSM4=", "id"=>"3"}
+  [4;36;1mSection Load (3.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 3) [0m
+  [4;35;1mSection Update (85.0ms)[0m   [0mUPDATE "sections" SET "updated_at" = '2009-07-03 06:30:06', "title" = 'Section 3' WHERE "id" = 3[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/sections/3
+Completed in 600ms (DB: 88) | 302 Found [http://localhost/sections/3]
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-07-03 08:30:08) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSection Load (3.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering sections/show
+Completed in 299ms (View: 113, DB: 3) | 200 OK [http://localhost/sections/3]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-07-03 08:30:13) [GET]
+  [4;35;1mSection Load (21.0ms)[0m   [0mSELECT * FROM "sections" [0m
+Rendering template within layouts/application
+Rendering sections/index
+Completed in 399ms (View: 145, DB: 21) | 200 OK [http://localhost/sections]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-07-03 08:36:54) [GET]
+
+SyntaxError (/home/Administrateur/projects/text-project/blog/textile/app/models/section.rb:5: syntax error, unexpected ',', expecting kEND
+	 	:image, :styles => { :small=>"150x150>",:thumb=>"50x50>"},
+	 	       ^
+/home/Administrateur/projects/text-project/blog/textile/app/models/section.rb:5: syntax error, unexpected ',', expecting kEND
+/home/Administrateur/projects/text-project/blog/textile/app/models/section.rb:6: syntax error, unexpected ',', expecting kEND):
+  app/controllers/sections_controller.rb:6:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (366.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-07-03 08:37:34) [GET]
+
+SyntaxError (/home/Administrateur/projects/text-project/blog/textile/app/models/section.rb:5: syntax error, unexpected ',', expecting kEND
+	 	:image, :styles => { :small=>"150x150>",:thumb=>"50x50>"},
+	 	       ^
+/home/Administrateur/projects/text-project/blog/textile/app/models/section.rb:5: syntax error, unexpected ',', expecting kEND
+/home/Administrateur/projects/text-project/blog/textile/app/models/section.rb:6: syntax error, unexpected ',', expecting kEND):
+  app/controllers/sections_controller.rb:6:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (1156.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-07-03 08:38:17) [GET]
+  [4;36;1mSection Load (5.0ms)[0m   [0;1mSELECT * FROM "sections" [0m
+Rendering template within layouts/application
+Rendering sections/index
+Completed in 628ms (View: 50, DB: 5) | 200 OK [http://localhost/sections]
+  [4;36;1mSQL (4.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSections (20090703023426)
+Migrating to AddAttachmentsImageToSections (20090703050741)
+Migrating to CreateArticles (20090703061341)
+Migrating to AddAttachmentsImageToArticles (20090703061725)
+Migrating to AddArticleCountToSections (20090703064236)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mALTER TABLE "sections" ADD "articles_count" integer DEFAULT 0[0m
+  [4;36;1mSQL (19.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_sections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "keywords" varchar(255), "meta" varchar(255), "content" text, "status" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_content_type" varchar(255), "image_file_size" integer, "image_updated_at" datetime, "articles_count" integer DEFAULT 0) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sections")[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mDROP TABLE "sections"[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "sections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "keywords" varchar(255), "meta" varchar(255), "status" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_content_type" varchar(255), "image_file_size" integer, "image_updated_at" datetime, "articles_count" integer DEFAULT 0) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_sections")[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "altered_sections"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090703064236')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sections")[0m
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:27:58) [GET]
+
+ArgumentError (Unknown key(s): counter_cache):
+  (eval):3:in `has_many'
+  app/models/section.rb:15
+  app/controllers/sections_controller.rb:28:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (681.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:28:31) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+
+ActionView::TemplateError (undefined method `content' for #<Section:0x7f0d99ac>) on line #19 of app/views/sections/new.html.erb:
+16:   </p>
+17:   <p>
+18:     <%= f.label :content %><br />
+19:     <%= f.text_area :content , :class => 'rich_text_editor' %>
+20:   </p>
+21:   <p>
+22:     <%= f.label :status %><br />
+
+    app/views/sections/new.html.erb:19
+    app/views/sections/new.html.erb:3
+    app/controllers/sections_controller.rb:30:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (1188.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:29:18) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 265ms (View: 136, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:30:41) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 192ms (View: 88, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:31:09) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 191ms (View: 87, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:31:40) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 214ms (View: 85, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:32:27) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 456ms (View: 337, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:33:17) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 130ms (View: 48, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:34:06) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 289ms (View: 125, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:34:37) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 244ms (View: 122, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:36:00) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 248ms (View: 111, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:37:07) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 246ms (View: 110, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:37:28) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 215ms (View: 94, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:37:43) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 241ms (View: 93, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:37:57) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 199ms (View: 92, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:38:14) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 220ms (View: 96, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:38:46) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 231ms (View: 95, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:39:36) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 232ms (View: 110, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:44:51) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+
+ActionView::TemplateError (undefined method `merge' for ["oui", "non"]:Array) on line #18 of app/views/sections/new.html.erb:
+15:     <%= f.text_area :meta  , :cols => 40 , :rows => 5  %>
+16:   </p>
+17:   <p>
+18:  <%= f.select(:section, :status, ['oui','non'], {:include_blank => true}) %>
+19: 
+20:   </p>
+21:   <p>
+
+    app/views/sections/new.html.erb:18
+    app/views/sections/new.html.erb:3
+    app/controllers/sections_controller.rb:30:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (456.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:46:44) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.merge) on line #18 of app/views/sections/new.html.erb:
+15:     <%= f.text_area :meta  , :cols => 40 , :rows => 5  %>
+16:   </p>
+17:   <p>
+18:  <%= f.select(:section, :status, @yes, {:include_blank => true}) %>
+19: 
+20:   </p>
+21:   <p>
+
+    app/views/sections/new.html.erb:18
+    app/views/sections/new.html.erb:3
+    app/controllers/sections_controller.rb:30:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (542.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:47:36) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+
+ActionView::TemplateError (undefined method `section' for #<Section:0x7f1a9dc8>) on line #18 of app/views/sections/new.html.erb:
+15:     <%= f.text_area :meta  , :cols => 40 , :rows => 5  %>
+16:   </p>
+17:   <p>
+18:  <%= f.collection_select(:section, :status, @yes, {:include_blank => true}) %>
+19: 
+20:   </p>
+21:   <p>
+
+    app/views/sections/new.html.erb:18
+    app/views/sections/new.html.erb:3
+    app/controllers/sections_controller.rb:30:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (1479.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:47:56) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+
+ActionView::TemplateError (wrong number of arguments (3 for 4)) on line #18 of app/views/sections/new.html.erb:
+15:     <%= f.text_area :meta  , :cols => 40 , :rows => 5  %>
+16:   </p>
+17:   <p>
+18:  <%= f.collection_select(:status, @yes, {:include_blank => true}) %>
+19: 
+20:   </p>
+21:   <p>
+
+    app/views/sections/new.html.erb:18:in `collection_select'
+    app/views/sections/new.html.erb:18
+    app/views/sections/new.html.erb:3
+    app/controllers/sections_controller.rb:30:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (470.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:48:11) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+
+ActionView::TemplateError (undefined method `#<Section:0x7f124e98>' for #<Section:0x7f124e98>) on line #18 of app/views/sections/new.html.erb:
+15:     <%= f.text_area :meta  , :cols => 40 , :rows => 5  %>
+16:   </p>
+17:   <p>
+18:  <%= f.collection_select(@section, :status, @yes, {:include_blank => true}) %>
+19: 
+20:   </p>
+21:   <p>
+
+    app/views/sections/new.html.erb:18
+    app/views/sections/new.html.erb:3
+    app/controllers/sections_controller.rb:30:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (1378.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:49:06) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+
+ActionView::TemplateError (undefined method `#<Section:0x7f26e664>' for #<Section:0x7f26e664>) on line #18 of app/views/sections/new.html.erb:
+15:     <%= f.text_area :meta  , :cols => 40 , :rows => 5  %>
+16:   </p>
+17:   <p>
+18:  <%= f.collection_select(@section, :status, @yes, {:include_blank => true}) %>
+19: 
+20:   </p>
+21:   <p>
+
+    app/views/sections/new.html.erb:18
+    app/views/sections/new.html.erb:3
+    app/controllers/sections_controller.rb:30:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (570.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:49:43) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+
+ActionView::TemplateError (undefined method `section' for #<Section:0x7f0b5b24>) on line #18 of app/views/sections/new.html.erb:
+15:     <%= f.text_area :meta  , :cols => 40 , :rows => 5  %>
+16:   </p>
+17:   <p>
+18:  <%= f.collection_select('section', :status, @yes, {:include_blank => true}) %>
+19: 
+20:   </p>
+21:   <p>
+
+    app/views/sections/new.html.erb:18
+    app/views/sections/new.html.erb:3
+    app/controllers/sections_controller.rb:30:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (574.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:50:02) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+
+ActionView::TemplateError (undefined method `merge' for [{1=>"oui", 2=>"non"}]:Array) on line #18 of app/views/sections/new.html.erb:
+15:     <%= f.text_area :meta  , :cols => 40 , :rows => 5  %>
+16:   </p>
+17:   <p>
+18:  <%= f.select('section', :status, @yes, {:include_blank => true}) %>
+19: 
+20:   </p>
+21:   <p>
+
+    app/views/sections/new.html.erb:18
+    app/views/sections/new.html.erb:3
+    app/controllers/sections_controller.rb:30:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (500.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:51:28) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 236ms (View: 97, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:51:46) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 235ms (View: 98, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:52:10) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 256ms (View: 109, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:52:32) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 242ms (View: 112, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:52:45) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 232ms (View: 108, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:53:19) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 214ms (View: 94, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2009-07-03 09:53:32) [GET]
+Rendering template within layouts/application
+Rendering sections/new
+Completed in 239ms (View: 94, DB: 0) | 200 OK [http://localhost/sections/new]
+
+
+Processing SectionsController#create (for 127.0.0.1 at 2009-07-03 09:55:12) [POST]
+  Parameters: {"section"=>{"title"=>"Section 4", "meta"=>"", "image"=>#<File:/cygdrive/c/DOCUME~1/ADMINI~1/LOCALS~1/Temp/RackMultipart20090703-3608-1j7insd-0>, "status"=>"1", "keywords"=>""}, "commit"=>"Create", "authenticity_token"=>"CwKI5hUXMip1jJjIkKwSclIaF0xcumMGZ5ymXCfDSM4="}
+  [4;35;1mSection Create (3.0ms)[0m   [0mINSERT INTO "sections" ("created_at", "image_file_name", "title", "image_file_size", "updated_at", "image_content_type", "articles_count", "meta", "status", "image_updated_at", "keywords") VALUES('2009-07-03 07:55:21', 'hacker.jpg', 'Section 4', 25997, '2009-07-03 07:55:21', 'image/jpeg', 0, '', 't', '2009-07-03 07:55:13', '')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/sections/4/thumb/hacker.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/sections/4/original/hacker.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/sections/4/small/hacker.jpg
+Redirected to http://localhost:3000/sections/4
+Completed in 9858ms (DB: 3) | 302 Found [http://localhost/sections]
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-07-03 09:55:23) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mSection Load (2.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering sections/show
+
+ActionView::TemplateError (undefined method `content' for #<Section:0x7f2cb1ac>) on line #22 of app/views/sections/show.html.erb:
+19: 
+20: <p>
+21:   <b>Content:</b>
+22:   <%= @section.content %>
+23: </p>
+24: 
+25: <p>
+
+    app/views/sections/show.html.erb:22
+    app/controllers/sections_controller.rb:19:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (252.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2009-07-03 09:55:51) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mSection Load (16.0ms)[0m   [0mSELECT * FROM "sections" WHERE ("sections"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering sections/show
+Completed in 246ms (View: 106, DB: 16) | 200 OK [http://localhost/sections/4]
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2009-07-03 09:55:56) [GET]
+  [4;36;1mSection Load (19.0ms)[0m   [0;1mSELECT * FROM "sections" [0m
+Rendering template within layouts/application
+Rendering sections/index
+Completed in 216ms (View: 84, DB: 19) | 200 OK [http://localhost/sections]

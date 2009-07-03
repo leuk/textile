@@ -9,15 +9,11 @@
   </p>
   <p>
     <%= f.label :keywords %><br />
-    <%= f.text_field :keywords %>
+    <%= f.text_field :keywords , :html => { :cols => 10 , :rows => 10 } %>
   </p>
   <p>
     <%= f.label :meta %><br />
-    <%= f.text_field :meta %>
-  </p>
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
+    <%= f.text_field :meta , :html => { :cols => 10 , :rows => 10 } %>
   </p>
   <p>
     <%= f.label :status %><br />

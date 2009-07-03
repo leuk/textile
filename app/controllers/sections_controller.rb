@@ -1,6 +1,6 @@
 class SectionsController < ApplicationController
   
-  uses_yui_editor
+ # uses_yui_editor
 
   def index
     @sections = Section.all
@@ -26,7 +26,7 @@ class SectionsController < ApplicationController
   # GET /sections/new.xml
   def new
     @section = Section.new
-
+     @yes = [1=>'oui' , 2=>'non']
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @section }

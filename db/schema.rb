@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090703061725) do
+ActiveRecord::Schema.define(:version => 20090703064236) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(:version => 20090703061725) do
     t.string   "title"
     t.string   "keywords"
     t.string   "meta"
-    t.text     "content"
     t.boolean  "status",             :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -40,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20090703061725) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "articles_count",     :default => 0
   end
 
 end
