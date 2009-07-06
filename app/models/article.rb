@@ -8,7 +8,7 @@ class Article < ActiveRecord::Base
 	  	:path => ":rails_root/public/assets/articles/:id/:style/:basename.:extension"
 	  	
 	# Paperclip Validations	
-	  validates_attachment_presence :image
+	  # validates_attachment_presence :image
 	  validates_attachment_size :image, :less_than => 100.kilobytes
 	  validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']	
 	  

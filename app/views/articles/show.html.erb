@@ -1,33 +1,6 @@
-<h1>Articles</h2>
 
-<p>
-  <strong>Title:</strong>
-  <%=h @article.title %>
-</p>
-<p>
-  <strong>Content:</strong>
-  <%=h @article.content %>
-</p>
-<p>
-  <strong>S Publish:</strong>
-  <%=h @article.s_publish %>
-</p>
-<p>
-  <strong>E Publish:</strong>
-  <%=h @article.e_publish %>
-</p>
-<p>
-  <strong>Page Title:</strong>
-  <%=h @article.page_title %>
-</p>
-<p>
-  <strong>Keywords:</strong>
-  <%=h @article.keywords %>
-</p>
-<p>
-  <strong>Meta:</strong>
-  <%=h @article.meta %>
-</p>
+  <h2><%=h @article.title %>:</h2>
+  <%= @article.content %>
 
 <p>
   <%= link_to "Edit", edit_article_path(@article) %> |

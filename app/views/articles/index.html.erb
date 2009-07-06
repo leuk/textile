@@ -1,29 +1,13 @@
 <h1>Articles</h2>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th>S Publish</th>
-    <th>E Publish</th>
-    <th>Page Title</th>
-    <th>Keywords</th>
-    <th>Meta</th>
-  </tr>
+
   <% for article in @articles %>
-    <tr>
-      <td><%=h article.title %></td>
-      <td><%=h article.content %></td>
-      <td><%=h article.s_publish %></td>
-      <td><%=h article.e_publish %></td>
-      <td><%=h article.page_title %></td>
-      <td><%=h article.keywords %></td>
-      <td><%=h article.meta %></td>
-      <td><%= link_to "Show", article %></td>
-      <td><%= link_to "Edit", edit_article_path(article) %></td>
-      <td><%= link_to "Destroy", article, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
+    <h2><%=link_to article.title , article_path(article) %></h2>
+      <p>
+      	<% id = article.content.index("<!-- pagebreak -->") + 2 %>
+        <%= truncate(article.content , id) %>
+     </p>
+      <%=link_to :Lire_la_suite , article_path(article) %>
   <% end %>
-</table>
 
 <p><%= link_to "New Article", new_article_path %></p>

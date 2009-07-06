@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 	
-   uses_tiny_mce :only => ['new' , 'new'] , :options => 
+   uses_tiny_mce :only => ['new' , 'edit'] , :options => 
 		   				{
 		   				  :mode => 'textareas',
 		                  :theme => 'advanced',		                  
@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
 		                  :theme_advanced_toolbar_location => "top",
 		                  :theme_advanced_toolbar_align => "left"
 		                }
-
+ before_filter :load_sections , :only => [:new , :edit]
 	
   def index
     @articles = Article.all
@@ -33,7 +33,7 @@ class ArticlesController < ApplicationController
       flash[:notice] = "Successfully created article."
       redirect_to @article
     else
-      render :action => 'new'
+      redirect_to :action => 'new'
     end
   end
   
@@ -57,4 +57,9 @@ class ArticlesController < ApplicationController
     flash[:notice] = "Successfully destroyed article."
     redirect_to articles_url
   end
+  
+  private
+  	def load_sections
+  		@sections = Section.all :order => 'title'
+  	end
 end
