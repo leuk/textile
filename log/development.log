@@ -8774,3 +8774,212 @@ DEPRECATION WARNING: truncate takes an option hash instead of separate length an
 DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
 DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
 Completed in 275ms (View: 182, DB: 20) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 06:54:28) [GET]
+  [4;35;1mArticle Load (7.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+Completed in 778ms (View: 239, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 06:59:13) [GET]
+  [4;36;1mArticle Load (6.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+Completed in 491ms (View: 406, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 07:00:09) [GET]
+  [4;35;1mArticle Load (20.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+Completed in 279ms (View: 199, DB: 20) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 07:01:36) [GET]
+  [4;36;1mArticle Load (198.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+Completed in 652ms (View: 246, DB: 198) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 07:02:00) [GET]
+  [4;35;1mArticle Load (19.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+Completed in 447ms (View: 343, DB: 19) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 07:04:06) [GET]
+  [4;36;1mArticle Load (6.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+Completed in 673ms (View: 340, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 07:06:01) [GET]
+  [4;35;1mArticle Load (23.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+Completed in 300ms (View: 204, DB: 23) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 07:08:31) [GET]
+  [4;36;1mArticle Load (7.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+Completed in 410ms (View: 236, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 07:11:16) [GET]
+  [4;35;1mArticle Load (109.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+Completed in 462ms (View: 253, DB: 109) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 07:18:52) [GET]
+  [4;36;1mArticle Load (5.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+Completed in 329ms (View: 221, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 07:19:45) [GET]
+  [4;35;1mArticle Load (36.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from trunc_article at /home/Administrateur/projects/text-project/blog/textile/app/helpers/articles_helper.rb:10)
+Completed in 787ms (View: 272, DB: 36) | 200 OK [http://localhost/]

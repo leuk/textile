@@ -17,6 +17,7 @@ module ArticlesHelper
 	end
 	
 	def readmore(article)
-		link_to 'Lire la suite' , article_path(article)
+		link_to "Lire la suite - #{article.title}" , article_path(article) , 
+		:class => 'readmore' , :id => 'readmore' 
 	end
 end

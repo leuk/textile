@@ -5,8 +5,9 @@
                 <%= link_to (image_tag(article.image.url(:original)) ,  
                                       article_url(article) )%>
                 <span class="<%= cycle (:top , :bottom)%>">
-                 <strong><%= link_to article.title %></strong><br />
+                 <strong><%= link_to article.title , article_path(article) %></strong><br />
                  <%= truncate(article.content , 200) %>
+                 <%= readmore(article)%>
                 </span>                	
              </li>    
            <% end %>
@@ -14,10 +15,8 @@
         </ul>
     </div>
 
-<h1>Articles</h2>
 <!-- RENDERING MAIN PAGE ARTICLES -->
   <% for article in @articles %>
 	<%= push_articles(article) %>
   <% end %>
 <!-- END RENDERING MAIN PAGE ARTICLES -->
-<p><%= link_to "New Article", new_article_path %></p>
