@@ -5508,3 +5508,623 @@ DEPRECATION WARNING: truncate takes an option hash instead of separate length an
 DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
 DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
 Completed in 4712ms (View: 1617, DB: 11) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:27:49) [GET]
+  [4;36;1mArticle Load (6.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+Completed in 3499ms (View: 3340, DB: 6) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:29:51) [GET]
+  [4;35;1mArticle Load (10.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `symbolize_keys!' for "/articles/1":String) on line #5 of app/views/articles/index.html.erb:
+2:         <ul id="slider1Content">
+3:           <% for article in @articles %>
+4:              <li class="slider1Image">
+5:                 <%= link_to image_tag(article.image.url(:original) ,  
+6:                                       article_path(article)) %>
+7:                 <span class="<%= cycle (:top , :bottom)%>">
+8:                  <strong><%= article.title %></strong><br />
+
+    app/views/articles/index.html.erb:5
+    app/views/articles/index.html.erb:3:in `each'
+    app/views/articles/index.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (583.0ms)
+Rendered rescues/_request_and_response (23.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:30:27) [GET]
+  [4;36;1mArticle Load (10.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+ERROR: compiling _run_erb_app47views47articles47index46html46erb RAISED compile error
+/home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:5: syntax error, unexpected ';', expecting ')'
+...image.url(:original)  ).to_s); @output_buffer.concat "\n    ...
+                              ^
+Function body:           def _run_erb_app47views47articles47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"slider1\">\n        <ul id=\"slider1Content\">\n          "
+
+;  for article in @articles ; @output_buffer.concat "\n             <li class=\"slider1Image\">\n                "
+
+; @output_buffer.concat(( link_to image_tag(article.image.url(:original)  ).to_s); @output_buffer.concat "\n                <span class=\""
+; @output_buffer.concat(( cycle (:top , :bottom)).to_s); @output_buffer.concat "\">\n                 <strong>"
+; @output_buffer.concat(( article.title ).to_s); @output_buffer.concat "</strong><br />\n                 "
+; @output_buffer.concat(( truncate(article.content , 200) ).to_s); @output_buffer.concat "\n                </span>                \t\n             </li>    \n           "
+
+
+;  end ; @output_buffer.concat "\n            <div class=\"clear slider1Image\"></div>\n        </ul>\n    </div>\n\n<h1>Articles</h2>\n\n\n  "
+
+
+
+
+
+
+
+;  for article in @articles ; @output_buffer.concat "\n    <h2>"
+; @output_buffer.concat((link_to article.title , article_path(article) ).to_s); @output_buffer.concat "</h2>\n      <p>\n      \t"
+
+;  id = article.content.index("<!-- pagebreak -->") + 2 ; @output_buffer.concat "\n        "
+; @output_buffer.concat(( truncate(article.content , id) ).to_s); @output_buffer.concat "\n     </p>\n      "
+
+; @output_buffer.concat((link_to :Lire_la_suite , article_path(article) ).to_s); @output_buffer.concat "\n  "
+;  end ; @output_buffer.concat "\n\n<p>"
+
+; @output_buffer.concat(( link_to "New Article", new_article_path ).to_s); @output_buffer.concat "</p>\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:32:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:5: syntax error, unexpected ';', expecting ')'
+...image.url(:original)  ).to_s); @output_buffer.concat "\n    ...
+                              ^) on line #5 of app/views/articles/index.html.erb:
+2:         <ul id="slider1Content">
+3:           <% for article in @articles %>
+4:              <li class="slider1Image">
+5:                 <%= link_to image_tag(article.image.url(:original)  %>
+6:                 <span class="<%= cycle (:top , :bottom)%>">
+7:                  <strong><%= article.title %></strong><br />
+8:                  <%= truncate(article.content , 200) %>
+
+    app/views/articles/index.html.erb:32:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (446.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:30:40) [GET]
+  [4;35;1mArticle Load (23.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+Completed in 1414ms (View: 380, DB: 23) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:31:27) [GET]
+  [4;36;1mArticle Load (23.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `symbolize_keys!' for "/articles/1":String) on line #5 of app/views/articles/index.html.erb:
+2:         <ul id="slider1Content">
+3:           <% for article in @articles %>
+4:              <li class="slider1Image">
+5:                 <%= link_to image_tag article.image.url(:original) ,  
+6:                                       article_path(article) %>
+7:                 <span class="<%= cycle (:top , :bottom)%>">
+8:                  <strong><%= article.title %></strong><br />
+
+    app/views/articles/index.html.erb:5
+    app/views/articles/index.html.erb:3:in `each'
+    app/views/articles/index.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (1269.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:32:19) [GET]
+  [4;35;1mArticle Load (24.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+Completed in 518ms (View: 368, DB: 24) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:32:55) [GET]
+  [4;36;1mArticle Load (23.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `symbolize_keys!' for "/articles/1":String) on line #5 of app/views/articles/index.html.erb:
+2:         <ul id="slider1Content">
+3:           <% for article in @articles %>
+4:              <li class="slider1Image">
+5:                 <%= link_to (image_tag article.image.url(:original) ,  
+6:                                       article_path(article)) %>
+7:                 <span class="<%= cycle (:top , :bottom)%>">
+8:                  <strong><%= article.title %></strong><br />
+
+    app/views/articles/index.html.erb:5
+    app/views/articles/index.html.erb:3:in `each'
+    app/views/articles/index.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (1401.0ms)
+Rendered rescues/_request_and_response (18.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:33:29) [GET]
+  [4;35;1mArticle Load (6.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+ERROR: compiling _run_erb_app47views47articles47index46html46erb RAISED compile error
+/home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:6: syntax error, unexpected ';', expecting ')'
+...              :id =>1 ).to_s); @output_buffer.concat "\n    ...
+                              ^
+Function body:           def _run_erb_app47views47articles47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"slider1\">\n        <ul id=\"slider1Content\">\n          "
+
+;  for article in @articles ; @output_buffer.concat "\n             <li class=\"slider1Image\">\n                "
+
+; @output_buffer.concat(( link_to (image_tag article.image.url(:original) ,  
+                                      :id =>1 ).to_s); @output_buffer.concat "\n                <span class=\""
+; @output_buffer.concat(( cycle (:top , :bottom)).to_s); @output_buffer.concat "\">\n                 <strong>"
+; @output_buffer.concat(( article.title ).to_s); @output_buffer.concat "</strong><br />\n                 "
+; @output_buffer.concat(( truncate(article.content , 200) ).to_s); @output_buffer.concat "\n                </span>                \t\n             </li>    \n           "
+
+
+;  end ; @output_buffer.concat "\n            <div class=\"clear slider1Image\"></div>\n        </ul>\n    </div>\n\n<h1>Articles</h2>\n\n\n  "
+
+
+
+
+
+
+
+;  for article in @articles ; @output_buffer.concat "\n    <h2>"
+; @output_buffer.concat((link_to article.title , article_path(article) ).to_s); @output_buffer.concat "</h2>\n      <p>\n      \t"
+
+;  id = article.content.index("<!-- pagebreak -->") + 2 ; @output_buffer.concat "\n        "
+; @output_buffer.concat(( truncate(article.content , id) ).to_s); @output_buffer.concat "\n     </p>\n      "
+
+; @output_buffer.concat((link_to :Lire_la_suite , article_path(article) ).to_s); @output_buffer.concat "\n  "
+;  end ; @output_buffer.concat "\n\n<p>"
+
+; @output_buffer.concat(( link_to "New Article", new_article_path ).to_s); @output_buffer.concat "</p>\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:33:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:6: syntax error, unexpected ';', expecting ')'
+...              :id =>1 ).to_s); @output_buffer.concat "\n    ...
+                              ^) on line #6 of app/views/articles/index.html.erb:
+3:           <% for article in @articles %>
+4:              <li class="slider1Image">
+5:                 <%= link_to (image_tag article.image.url(:original) ,  
+6:                                       :id =>1 %>
+7:                 <span class="<%= cycle (:top , :bottom)%>">
+8:                  <strong><%= article.title %></strong><br />
+9:                  <%= truncate(article.content , 200) %>
+
+    app/views/articles/index.html.erb:33:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (193.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:33:48) [GET]
+  [4;36;1mArticle Load (9.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+Completed in 466ms (View: 318, DB: 9) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:34:28) [GET]
+  [4;35;1mArticle Load (24.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `symbolize_keys!' for "/articles/1":String) on line #5 of app/views/articles/index.html.erb:
+2:         <ul id="slider1Content">
+3:           <% for article in @articles %>
+4:              <li class="slider1Image">
+5:                 <%= link_to (image_tag article.image.url(:original) ,  
+6:                                       article_path(article) )%>
+7:                 <span class="<%= cycle (:top , :bottom)%>">
+8:                  <strong><%= article.title %></strong><br />
+
+    app/views/articles/index.html.erb:5
+    app/views/articles/index.html.erb:3:in `each'
+    app/views/articles/index.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (1475.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:35:05) [GET]
+  [4;36;1mArticle Load (23.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `url' for #<ActionView::Base:0x7f2daaf8>) on line #6 of app/views/articles/index.html.erb:
+3:           <% for article in @articles %>
+4:              <li class="slider1Image">
+5:                 <%= link_to (image_tag article.image.url(:original) ,  
+6:                                       url(article) )%>
+7:                 <span class="<%= cycle (:top , :bottom)%>">
+8:                  <strong><%= article.title %></strong><br />
+9:                  <%= truncate(article.content , 200) %>
+
+    app/views/articles/index.html.erb:6
+    app/views/articles/index.html.erb:3:in `each'
+    app/views/articles/index.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (527.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:35:17) [GET]
+  [4;35;1mArticle Load (9.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `symbolize_keys!' for "http://localhost:3000/articles/1":String) on line #5 of app/views/articles/index.html.erb:
+2:         <ul id="slider1Content">
+3:           <% for article in @articles %>
+4:              <li class="slider1Image">
+5:                 <%= link_to (image_tag article.image.url(:original) ,  
+6:                                       article_url(article) )%>
+7:                 <span class="<%= cycle (:top , :bottom)%>">
+8:                  <strong><%= article.title %></strong><br />
+
+    app/views/articles/index.html.erb:5
+    app/views/articles/index.html.erb:3:in `each'
+    app/views/articles/index.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (1737.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:39:01) [GET]
+  [4;36;1mArticle Load (25.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:9)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:24)
+Completed in 522ms (View: 384, DB: 25) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:41:12) [GET]
+  [4;35;1mArticle Load (25.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:25)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:25)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:25)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:25)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:25)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:25)
+Completed in 725ms (View: 412, DB: 25) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:41:59) [GET]
+  [4;36;1mArticle Load (6.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:10)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:26)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:26)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:26)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:26)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:26)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:26)
+Completed in 1063ms (View: 892, DB: 6) | 200 OK [http://localhost/articles]
