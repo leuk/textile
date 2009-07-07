@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
  before_filter :load_sections , :only => [:new , :edit]
 	
   def index
-    @articles = Article.all
+    @articles = Article.all 
   end
   
   def show
