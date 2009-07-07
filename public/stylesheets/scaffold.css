@@ -91,6 +91,15 @@ a:hover { color: #fff; background-color:#000; }
 .slider1Image span strong {
     font-size: 14px;
 }
+.top {
+	top: 0;
+	left: 0;
+}
+.bottom {
+	bottom: 0;
+    left: 0;
+}
+
 .left {
 	top: 0;
     left: 0;

@@ -1,8 +1,12 @@
-<% form_for @article do |f| %>
+<% form_for @article , :html => {:multipart => true} do |f| %>
   <%= f.error_messages %>
   <p>  
  	<%= f.label :section %>
     <%= f.collection_select( :section_id, @sections,:id,:title) %>
+  </p>
+    <p>
+    <%= f.label :image %><br />
+    <%= f.file_field :image  %>
   </p>
   <p>
     <%= f.label :titre %><br />

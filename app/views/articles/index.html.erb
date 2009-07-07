@@ -1,11 +1,14 @@
 <div id="slider1">
         <ul id="slider1Content">
-            <li class="slider1Image">
+          <% for article in @articles %>
+             <li class="slider1Image">
                 <a href=""><%= image_tag '1.jpg' %></a>
-                <span class="left"><strong>Title text 1</strong><br />Content text...</span></li>
-    <li class="slider1Image">
-                <a href=""><%= image_tag '1.jpg' %></a>
-                <span class="left"><strong>Title text 1</strong><br />Content text...</span></li>          
+                <span class="<%= cycle (:top , :bottom)%>">
+                 <strong><%= article.title %></strong><br />
+                 <%= truncate(article.content , 200) %>
+                </span>                	
+             </li>    
+           <% end %>
             <div class="clear slider1Image"></div>
         </ul>
     </div>

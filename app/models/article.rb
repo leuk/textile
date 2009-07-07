@@ -3,7 +3,7 @@ class Article < ActiveRecord::Base
 	
 	# Handling paperclip attached images for user sections 
 	 has_attached_file :image,
-	    :styles => { :small=>"150x150>" , :thumb=>"50x50>" , :thumb=>"600x325>" },
+	    :styles => { :small=>"150x150>"  , :thumb=>"200>" },
 	  	:url  => "/assets/articles/:id/:style/:basename.:extension",
 	  	:path => ":rails_root/public/assets/articles/:id/:style/:basename.:extension"
 	  	

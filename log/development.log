@@ -4715,3 +4715,796 @@ DEPRECATION WARNING: truncate takes an option hash instead of separate length an
 DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
 DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
 Completed in 265ms (View: 216, DB: 5) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2009-07-07 02:35:46) [GET]
+  [4;36;1mSection Load (5.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY title[0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered articles/_form (76.0ms)
+Completed in 1356ms (View: 224, DB: 5) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2009-07-07 02:36:34) [POST]
+  Parameters: {"article"=>{"page_title"=>"Lorem Ipsum", "title"=>"Lorem Ipsum", "section_id"=>"3", "meta"=>"", "content"=>"<p style=\"text-align: justify;\">Le <strong>Lorem Ipsum</strong> est simplement du faux texte employ&eacute; dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les ann&eacute;es 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour r&eacute;aliser un livre sp&eacute;cimen de polices de texte. Il n'a pas fait que survivre cinq si&egrave;cles, mais s'est aussi adapt&eacute; &agrave; la bureautique informatique, sans que son contenu n'en soit modifi&eacute;.<!-- pagebreak --> Il a &eacute;t&eacute; popularis&eacute; dans les ann&eacute;es 1960 gr&acirc;ce &agrave; la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus r&eacute;cemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>", "keywords"=>""}, "e_publish"=>"", "commit"=>"Submit", "s_publish"=>"", "authenticity_token"=>"to0dOMoNFHAZOg6uuw8+/Agx509YhXppWC8gvvx75EM="}
+  [4;35;1mArticle Create (62.0ms)[0m   [0mINSERT INTO "articles" ("e_publish", "page_title", "created_at", "image_file_name", "title", "image_file_size", "s_publish", "updated_at", "section_id", "image_content_type", "meta", "content", "status", "image_updated_at", "keywords") VALUES(NULL, 'Lorem Ipsum', '2009-07-07 00:36:34', NULL, 'Lorem Ipsum', NULL, NULL, '2009-07-07 00:36:34', 3, NULL, '', '<p style="text-align: justify;">Le <strong>Lorem Ipsum</strong> est simplement du faux texte employ&eacute; dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l''imprimerie depuis les ann&eacute;es 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour r&eacute;aliser un livre sp&eacute;cimen de polices de texte. Il n''a pas fait que survivre cinq si&egrave;cles, mais s''est aussi adapt&eacute; &agrave; la bureautique informatique, sans que son contenu n''en soit modifi&eacute;.<!-- pagebreak --> Il a &eacute;t&eacute; popularis&eacute; dans les ann&eacute;es 1960 gr&acirc;ce &agrave; la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus r&eacute;cemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>', 'f', NULL, '')[0m
+  [4;36;1mSection Load (2.0ms)[0m   [0;1mSELECT * FROM "sections" WHERE ("sections"."id" = 3) [0m
+  [4;35;1mSection Update (1.0ms)[0m   [0mUPDATE "sections" SET "articles_count" = COALESCE("articles_count", 0) + 1 WHERE ("id" = 3) [0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/articles/6
+Completed in 1282ms (DB: 65) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:36:37) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (2.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 176ms (View: 72, DB: 2) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:37:36) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `image' for #<ActionView::Base:0x7f2de874>) on line #1 of app/views/articles/show.html.erb:
+1: <%= image tag @article.image.url %>
+2:   <h2><%=h @article.title %>:</h2>
+3:   <%= @article.content %>
+4: 
+
+    app/views/articles/show.html.erb:1
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (363.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:38:51) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (2.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 287ms (View: 121, DB: 2) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2009-07-07 02:39:12) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSection Load (20.0ms)[0m   [0mSELECT * FROM "sections" ORDER BY title[0m
+  [4;36;1mArticle Load (2.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Rendered articles/_form (75.0ms)
+Completed in 404ms (View: 173, DB: 22) | 200 OK [http://localhost/articles/6/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2009-07-07 02:39:29) [PUT]
+  Parameters: {"article"=>{"page_title"=>"Lorem Ipsum", "title"=>"Lorem Ipsum", "section_id"=>"3", "meta"=>"", "content"=>"<p style=\"text-align: justify;\">Le <strong>Lorem Ipsum</strong> est simplement du faux texte employ&eacute; dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les ann&eacute;es 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour r&eacute;aliser un livre sp&eacute;cimen de polices de texte. Il n'a pas fait que survivre cinq si&egrave;cles, mais s'est aussi adapt&eacute; &agrave; la bureautique informatique, sans que son contenu n'en soit modifi&eacute;.<!-- pagebreak --> Il a &eacute;t&eacute; popularis&eacute; dans les ann&eacute;es 1960 gr&acirc;ce &agrave; la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus r&eacute;cemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>", "image"=>#<File:/cygdrive/c/DOCUME~1/ADMINI~1/LOCALS~1/Temp/RackMultipart20090707-2660-3d00cc-0>, "keywords"=>""}, "e_publish"=>"", "commit"=>"Submit", "s_publish"=>"", "authenticity_token"=>"to0dOMoNFHAZOg6uuw8+/Agx509YhXppWC8gvvx75EM=", "id"=>"6"}
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+  [4;36;1mArticle Update (3.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2009-07-07 00:39:40', "image_file_size" = 72187, "image_file_name" = '1.jpg', "image_content_type" = 'image/jpeg', "image_updated_at" = '2009-07-07 00:39:29' WHERE "id" = 6[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/6/small/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/6/thumb/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/6/original/1.jpg
+Redirected to http://localhost:3000/articles/6
+Completed in 12241ms (DB: 5) | 302 Found [http://localhost/articles/6]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:39:42) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 194ms (View: 68, DB: 2) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:40:04) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (3.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `image' for #<ActionView::Base:0x7f116fdc>) on line #1 of app/views/articles/show.html.erb:
+1: <%= image tag @article.image.url %>
+2:   <h2><%=h @article.title %>:</h2>
+3:   <%= @article.content %>
+4: 
+
+    app/views/articles/show.html.erb:1
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (378.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:41:44) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mArticle Load (3.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `image' for #<ActionView::Base:0x7f267468>) on line #1 of app/views/articles/show.html.erb:
+1: <%= image tag @article.image.url(:thumb) %>
+2:   <h2><%=h @article.title %>:</h2>
+3:   <%= @article.content %>
+4: 
+
+    app/views/articles/show.html.erb:1
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (417.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:43:08) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (2.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 214ms (View: 46, DB: 2) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2009-07-07 02:43:14) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSection Load (5.0ms)[0m   [0mSELECT * FROM "sections" ORDER BY title[0m
+  [4;36;1mArticle Load (3.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Rendered articles/_form (41.0ms)
+Completed in 331ms (View: 68, DB: 8) | 200 OK [http://localhost/articles/6/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2009-07-07 02:43:28) [PUT]
+  Parameters: {"article"=>{"page_title"=>"Lorem Ipsum", "title"=>"Lorem Ipsum", "section_id"=>"3", "meta"=>"", "content"=>"<p style=\"text-align: justify;\">Le <strong>Lorem Ipsum</strong> est simplement du faux texte employ&eacute; dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les ann&eacute;es 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour r&eacute;aliser un livre sp&eacute;cimen de polices de texte. Il n'a pas fait que survivre cinq si&egrave;cles, mais s'est aussi adapt&eacute; &agrave; la bureautique informatique, sans que son contenu n'en soit modifi&eacute;.<!-- pagebreak --> Il a &eacute;t&eacute; popularis&eacute; dans les ann&eacute;es 1960 gr&acirc;ce &agrave; la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus r&eacute;cemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>", "image"=>#<File:/cygdrive/c/DOCUME~1/ADMINI~1/LOCALS~1/Temp/RackMultipart20090707-2660-wdklh6-0>, "keywords"=>""}, "e_publish"=>"", "commit"=>"Submit", "s_publish"=>"", "authenticity_token"=>"to0dOMoNFHAZOg6uuw8+/Agx509YhXppWC8gvvx75EM=", "id"=>"6"}
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+  [4;36;1mArticle Update (2.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2009-07-07 00:43:34', "image_updated_at" = '2009-07-07 00:43:28' WHERE "id" = 6[0m
+[paperclip] Saving attachments.
+[paperclip] deleting /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/6/original/1.jpg
+[paperclip] deleting /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/6/small/1.jpg
+[paperclip] deleting /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/6/thumb/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/6/small/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/6/thumb/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/6/original/1.jpg
+Redirected to http://localhost:3000/articles/6
+Completed in 6933ms (DB: 4) | 302 Found [http://localhost/articles/6]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:43:36) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mArticle Load (3.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 113ms (View: 37, DB: 3) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:44:06) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mArticle Load (2.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 235ms (View: 114, DB: 2) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:44:38) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 279ms (View: 102, DB: 2) | 200 OK [http://localhost/articles/6]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 02:44:59) [GET]
+  [4;36;1mArticle Load (7.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+Completed in 312ms (View: 180, DB: 7) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:45:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 214ms (View: 155, DB: 2) | 200 OK [http://localhost/articles/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-07 02:45:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2009-07-07 02:45:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSection Load (5.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY title[0m
+  [4;35;1mArticle Load (3.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Rendered articles/_form (136.0ms)
+Completed in 631ms (View: 265, DB: 8) | 200 OK [http://localhost/articles/1/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2009-07-07 02:45:41) [PUT]
+  Parameters: {"article"=>{"page_title"=>"Lorem Ipsum", "title"=>"Lorem Ipsum", "section_id"=>"3", "meta"=>"", "content"=>"<p style=\"text-align: justify;\">Le <strong>Lorem Ipsum</strong> est simplement du faux texte employ&eacute; dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les ann&eacute;es 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour r&eacute;aliser un livre sp&eacute;cimen de polices de texte. Il n'a pas fait que survivre cinq si&egrave;cles, mais s'est aussi adapt&eacute; &agrave; la bureautique informatique, sans que son contenu n'en soit modifi&eacute;. Il a &eacute;t&eacute; popularis&eacute; dans les ann&eacute;es 1960 gr&acirc;ce &agrave; la vente de feuilles<!-- pagebreak --> Letraset contenant des passages du Lorem Ipsum, et, plus r&eacute;cemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>", "image"=>#<File:/cygdrive/c/DOCUME~1/ADMINI~1/LOCALS~1/Temp/RackMultipart20090707-2660-zsxp5b-0>, "keywords"=>""}, "e_publish"=>"", "commit"=>"Submit", "s_publish"=>"", "authenticity_token"=>"to0dOMoNFHAZOg6uuw8+/Agx509YhXppWC8gvvx75EM=", "id"=>"1"}
+  [4;36;1mArticle Load (2.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Update (3.0ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2009-07-07 00:45:46', "image_file_size" = 72187, "image_file_name" = '1.jpg', "image_content_type" = 'image/jpeg', "image_updated_at" = '2009-07-07 00:45:41' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/1/small/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/1/thumb/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/1/original/1.jpg
+Redirected to http://localhost:3000/articles/1
+Completed in 6096ms (DB: 5) | 302 Found [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:45:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (2.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 165ms (View: 40, DB: 2) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 02:46:06) [GET]
+  [4;35;1mArticle Load (21.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+Completed in 293ms (View: 163, DB: 21) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:46:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mArticle Load (2.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 144ms (View: 35, DB: 2) | 200 OK [http://localhost/articles/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-07 02:46:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2009-07-07 02:46:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSection Load (21.0ms)[0m   [0mSELECT * FROM "sections" ORDER BY title[0m
+  [4;36;1mArticle Load (3.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Rendered articles/_form (91.0ms)
+Completed in 1045ms (View: 149, DB: 24) | 200 OK [http://localhost/articles/2/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2009-07-07 02:46:32) [PUT]
+  Parameters: {"article"=>{"page_title"=>"Lorem Ipsum", "title"=>"Lorem Ipsum", "section_id"=>"3", "meta"=>"", "content"=>"<p style=\"text-align: justify;\">Le <strong>Lorem Ipsum</strong> est simplement du faux texte employ&eacute; dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les ann&eacute;es 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour r&eacute;aliser un livre sp&eacute;cimen de polices de texte. <!-- pagebreak -->Il n'a pas fait que survivre cinq si&egrave;cles, mais s'est aussi adapt&eacute; &agrave; la bureautique informatique, sans que son contenu n'en soit modifi&eacute;. Il a &eacute;t&eacute; popularis&eacute; dans les ann&eacute;es 1960 gr&acirc;ce &agrave; la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus r&eacute;cemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>", "image"=>#<File:/cygdrive/c/DOCUME~1/ADMINI~1/LOCALS~1/Temp/RackMultipart20090707-2660-fkew2z-0>, "keywords"=>""}, "e_publish"=>"", "commit"=>"Submit", "s_publish"=>"", "authenticity_token"=>"to0dOMoNFHAZOg6uuw8+/Agx509YhXppWC8gvvx75EM=", "id"=>"2"}
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+  [4;36;1mArticle Update (3.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2009-07-07 00:46:40', "image_file_size" = 72187, "image_file_name" = '1.jpg', "image_content_type" = 'image/jpeg', "image_updated_at" = '2009-07-07 00:46:33' WHERE "id" = 2[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/2/small/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/2/thumb/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/2/original/1.jpg
+Redirected to http://localhost:3000/articles/2
+Completed in 8381ms (DB: 5) | 302 Found [http://localhost/articles/2]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:46:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArticle Load (19.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 218ms (View: 92, DB: 19) | 200 OK [http://localhost/articles/2]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 02:46:48) [GET]
+  [4;36;1mArticle Load (21.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+Completed in 236ms (View: 134, DB: 21) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:46:55) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 213ms (View: 37, DB: 2) | 200 OK [http://localhost/articles/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-07 02:46:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2009-07-07 02:46:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSection Load (5.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY title[0m
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Rendered articles/_form (73.0ms)
+Completed in 782ms (View: 594, DB: 7) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2009-07-07 02:47:15) [PUT]
+  Parameters: {"article"=>{"page_title"=>"Lorem Ipsum", "title"=>"Lorem Ipsum", "section_id"=>"3", "meta"=>"", "content"=>"<p style=\"text-align: justify;\">Le <strong>Lorem Ipsum</strong> est simplement du faux texte employ&eacute; dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les ann&eacute;es 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour r&eacute;aliser un livre sp&eacute;cimen de polices de texte.<!-- pagebreak --> Il n'a pas fait que survivre cinq si&egrave;cles, mais s'est aussi adapt&eacute; &agrave; la bureautique informatique, sans que son contenu n'en soit modifi&eacute;. Il a &eacute;t&eacute; popularis&eacute; dans les ann&eacute;es 1960 gr&acirc;ce &agrave; la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus r&eacute;cemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>", "image"=>#<File:/cygdrive/c/DOCUME~1/ADMINI~1/LOCALS~1/Temp/RackMultipart20090707-2660-m55gda-0>, "keywords"=>""}, "e_publish"=>"", "commit"=>"Submit", "s_publish"=>"", "authenticity_token"=>"to0dOMoNFHAZOg6uuw8+/Agx509YhXppWC8gvvx75EM=", "id"=>"3"}
+  [4;36;1mArticle Load (3.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;35;1mArticle Update (3.0ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2009-07-07 00:47:22', "image_file_size" = 72187, "image_file_name" = '1.jpg', "image_content_type" = 'image/jpeg', "image_updated_at" = '2009-07-07 00:47:15' WHERE "id" = 3[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/3/small/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/3/thumb/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/3/original/1.jpg
+Redirected to http://localhost:3000/articles/3
+Completed in 7636ms (DB: 6) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:47:23) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (2.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 212ms (View: 88, DB: 2) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 02:47:31) [GET]
+  [4;35;1mArticle Load (22.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+Completed in 332ms (View: 201, DB: 22) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:47:35) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mArticle Load (2.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 91ms (View: 35, DB: 2) | 200 OK [http://localhost/articles/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-07 02:47:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2009-07-07 02:47:38) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mSection Load (5.0ms)[0m   [0mSELECT * FROM "sections" ORDER BY title[0m
+  [4;36;1mArticle Load (3.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Rendered articles/_form (76.0ms)
+Completed in 338ms (View: 143, DB: 8) | 200 OK [http://localhost/articles/4/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2009-07-07 02:47:51) [PUT]
+  Parameters: {"article"=>{"page_title"=>"Lorem Ipsum", "title"=>"Lorem Ipsum", "section_id"=>"3", "meta"=>"", "content"=>"<p style=\"text-align: justify;\">Le <strong>Lorem Ipsum</strong> est simplement du faux texte employ&eacute; dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les ann&eacute;es 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour r&eacute;aliser un livre sp&eacute;cimen de polices de texte. <!-- pagebreak -->Il n'a pas fait que survivre cinq si&egrave;cles, mais s'est aussi adapt&eacute; &agrave; la bureautique informatique, sans que son contenu n'en soit modifi&eacute;. Il a &eacute;t&eacute; popularis&eacute; dans les ann&eacute;es 1960 gr&acirc;ce &agrave; la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus r&eacute;cemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>", "image"=>#<File:/cygdrive/c/DOCUME~1/ADMINI~1/LOCALS~1/Temp/RackMultipart20090707-2660-m5tqsv-0>, "keywords"=>""}, "e_publish"=>"", "commit"=>"Submit", "s_publish"=>"", "authenticity_token"=>"to0dOMoNFHAZOg6uuw8+/Agx509YhXppWC8gvvx75EM=", "id"=>"4"}
+  [4;35;1mArticle Load (17.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+  [4;36;1mArticle Update (3.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2009-07-07 00:47:58', "image_file_size" = 72187, "image_file_name" = '1.jpg', "image_content_type" = 'image/jpeg', "image_updated_at" = '2009-07-07 00:47:51' WHERE "id" = 4[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/4/small/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/4/thumb/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/4/original/1.jpg
+Redirected to http://localhost:3000/articles/4
+Completed in 7504ms (DB: 20) | 302 Found [http://localhost/articles/4]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:47:59) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 127ms (View: 41, DB: 2) | 200 OK [http://localhost/articles/4]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 02:48:05) [GET]
+  [4;36;1mArticle Load (6.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+Completed in 359ms (View: 197, DB: 6) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:48:10) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mArticle Load (3.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 252ms (View: 85, DB: 3) | 200 OK [http://localhost/articles/5]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-07 02:48:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2009-07-07 02:48:13) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mSection Load (5.0ms)[0m   [0;1mSELECT * FROM "sections" ORDER BY title[0m
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering articles/edit
+Rendered articles/_form (40.0ms)
+Completed in 213ms (View: 68, DB: 7) | 200 OK [http://localhost/articles/5/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2009-07-07 02:48:32) [PUT]
+  Parameters: {"article"=>{"page_title"=>"Lorem Ipsum", "title"=>"Lorem Ipsum", "section_id"=>"3", "meta"=>"", "content"=>"<p style=\"text-align: justify;\">Le <strong>Lorem Ipsum</strong> est simplement du faux texte employ&eacute; dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les ann&eacute;es 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour r&eacute;aliser un livre sp&eacute;cimen de polices de texte. <!-- pagebreak -->Il n'a pas fait que survivre cinq si&egrave;cles, mais s'est aussi adapt&eacute; &agrave; la bureautique informatique, sans que son contenu n'en soit modifi&eacute;. Il a &eacute;t&eacute; popularis&eacute; dans les ann&eacute;es 1960 gr&acirc;ce &agrave; la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus r&eacute;cemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>", "image"=>#<File:/cygdrive/c/DOCUME~1/ADMINI~1/LOCALS~1/Temp/RackMultipart20090707-2660-wyo0uc-0>, "keywords"=>""}, "e_publish"=>"", "commit"=>"Submit", "s_publish"=>"", "authenticity_token"=>"to0dOMoNFHAZOg6uuw8+/Agx509YhXppWC8gvvx75EM=", "id"=>"5"}
+  [4;36;1mArticle Load (19.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 5) [0m
+  [4;35;1mArticle Update (60.0ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2009-07-07 00:48:39', "image_file_size" = 72187, "image_file_name" = '1.jpg', "image_content_type" = 'image/jpeg', "image_updated_at" = '2009-07-07 00:48:33' WHERE "id" = 5[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/5/small/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/5/thumb/1.jpg
+[paperclip] saving /home/Administrateur/projects/text-project/blog/textile/public/assets/articles/5/original/1.jpg
+Redirected to http://localhost:3000/articles/5
+Completed in 7726ms (DB: 79) | 302 Found [http://localhost/articles/5]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-07-07 02:48:41) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mArticle Load (3.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Completed in 119ms (View: 46, DB: 3) | 200 OK [http://localhost/articles/5]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 02:48:54) [GET]
+  [4;35;1mArticle Load (21.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:20)
+Completed in 239ms (View: 136, DB: 21) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 02:51:52) [GET]
+  [4;36;1mArticle Load (7.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.tile) on line #7 of app/views/articles/index.html.erb:
+4:              <li class="slider1Image">
+5:                 <a href=""><%= image_tag '1.jpg' %></a>
+6:                 <span class="left">
+7:                  <strong><%= @article.tile %></strong><br /><%= @article.content %>
+8:                 </span>                	
+9:              </li>    
+10:            <% end %>
+
+    app/views/articles/index.html.erb:7
+    app/views/articles/index.html.erb:3:in `each'
+    app/views/articles/index.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (290.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 02:52:10) [GET]
+  [4;35;1mArticle Load (6.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `tile' for #<Article:0x7f0a8550>) on line #7 of app/views/articles/index.html.erb:
+4:              <li class="slider1Image">
+5:                 <a href=""><%= image_tag '1.jpg' %></a>
+6:                 <span class="left">
+7:                  <strong><%= article.tile %></strong><br /><%= article.content %>
+8:                 </span>                	
+9:              </li>    
+10:            <% end %>
+
+    app/views/articles/index.html.erb:7
+    app/views/articles/index.html.erb:3:in `each'
+    app/views/articles/index.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (377.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 02:52:44) [GET]
+  [4;36;1mArticle Load (7.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:22)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:22)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:22)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:22)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:22)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:22)
+Completed in 334ms (View: 229, DB: 7) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 02:53:44) [GET]
+  [4;35;1mArticle Load (7.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+Completed in 930ms (View: 231, DB: 7) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 02:54:40) [GET]
+  [4;36;1mArticle Load (6.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+Completed in 432ms (View: 274, DB: 6) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 02:55:02) [GET]
+  [4;35;1mArticle Load (21.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+Completed in 394ms (View: 272, DB: 21) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:00:54) [GET]
+  [4;36;1mArticle Load (6.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+Completed in 882ms (View: 831, DB: 6) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:01:40) [GET]
+  [4;35;1mArticle Load (8.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+Completed in 411ms (View: 256, DB: 8) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:02:06) [GET]
+  [4;36;1mArticle Load (7.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+Completed in 315ms (View: 214, DB: 7) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:05:23) [GET]
+  [4;35;1mArticle Load (7.0ms)[0m   [0mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+Completed in 394ms (View: 220, DB: 7) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-07-07 03:06:42) [GET]
+  [4;36;1mArticle Load (11.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+Rendering template within layouts/application
+Rendering articles/index
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:8)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+DEPRECATION WARNING: truncate takes an option hash instead of separate length and omission arguments. (called from _run_erb_app47views47articles47index46html46erb at /home/Administrateur/projects/text-project/blog/textile/app/views/articles/index.html.erb:23)
+Completed in 4712ms (View: 1617, DB: 11) | 200 OK [http://localhost/articles]
