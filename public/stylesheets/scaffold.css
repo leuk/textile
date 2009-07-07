@@ -44,3 +44,19 @@ ul { list-style-type: none;}
 /* ------  -------- ---------- END SLIDER CSS ------- ------------- --------  ------------------*/
 
 a.readmore { color: red; }  a.readmore:hover { color: yellow; } 
+
+
+/* ---------------- FLASH MESSAGES ------------------- --------- ----------- */
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+/* ---------------- END FLASH MESSAGES --------------- --------- ----------- */

@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
 	
   def index
     @articles = Article.all 
+    flash[:notice] = 'The Flash is workin'
   end
   
   def show
