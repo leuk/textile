@@ -3,12 +3,10 @@
           <% for article in @articles %>
              <li class="slider1Image">
                 <%= link_to (image_tag(article.image.url(:original)) ,  
-                                      article_path(article) )%>
+                                      article_url(article) )%>
                 <span class="<%= cycle (:top , :bottom)%>">
-                 <strong>
-                 	<%= link_to article.title , article_path(article) %>               				 </strong><br />
+                 <strong><%= link_to article.title %></strong><br />
                  <%= truncate(article.content , 200) %>
-                 <%=link_to :Lire_la_suite , article_path(article) %>
                 </span>                	
              </li>    
            <% end %>
@@ -17,15 +15,9 @@
     </div>
 
 <h1>Articles</h2>
-
-
+<!-- RENDERING MAIN PAGE ARTICLES -->
   <% for article in @articles %>
-    <h2><%=link_to article.title , article_path(article) %></h2>
-      <p>
-      	<% id = article.content.index("<!-- pagebreak -->") + 2 %>
-        <%= truncate(article.content , id) %>
-     </p>
-      <%=link_to :Lire_la_suite , article_path(article) %>
+	<%= push_articles(article) %>
   <% end %>
-
+<!-- END RENDERING MAIN PAGE ARTICLES -->
 <p><%= link_to "New Article", new_article_path %></p>
